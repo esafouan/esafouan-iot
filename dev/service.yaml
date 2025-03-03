@@ -8,6 +8,6 @@ spec:
     app: wil42
   ports:
     - protocol: TCP
-      port: 9999
+      port: 80
       targetPort: 9999
       nodePort: 31000
