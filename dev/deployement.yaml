@@ -1,8 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wil-playground
+  name: wil-playground-deployment
   namespace: dev
+  labels:
+    name: wil-playground
 spec:
   selector:
     matchLabels:
@@ -13,7 +15,7 @@ spec:
         app: wil-playground
     spec:
       containers:
-        - name: wil-playground
-          image: wil42/playground:v1
-          ports:
-            - containerPort: 8081
+      - name: wil-playground
+        image: wil42/playground:v1
+        ports:
+        - containerPort: 8081
